@@ -1,7 +1,15 @@
-import React from 'react';
-import { Mail, Linkedin, Github, Phone, Send } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Mail, Linkedin, Github, Phone } from 'lucide-react';
+import Cal, { getCalApi } from "@calcom/embed-react";
 
 const Contact = () => {
+    useEffect(() => {
+        (async function () {
+            const cal = await getCalApi({ "namespace": "30min" });
+            cal("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+        })();
+    }, []);
+
     return (
         <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 bg-black/40 border border-white/5 rounded-3xl p-8 md:p-12 overflow-hidden relative">
@@ -46,49 +54,13 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="relative z-10">
-                    <form className="space-y-4">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="space-y-2">
-                                <label className="text-xs font-medium text-gray-500 uppercase tracking-wider">Name</label>
-                                <input
-                                    type="text"
-                                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
-                                    placeholder="John Doe"
-                                />
-                            </div>
-                            <div className="space-y-2">
-                                <label className="text-xs font-medium text-gray-500 uppercase tracking-wider">Email</label>
-                                <input
-                                    type="email"
-                                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
-                                    placeholder="john@example.com"
-                                />
-                            </div>
-                        </div>
-
-                        <div className="space-y-2">
-                            <label className="text-xs font-medium text-gray-500 uppercase tracking-wider">Subject</label>
-                            <input
-                                type="text"
-                                className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
-                                placeholder="Project Inquiry"
-                            />
-                        </div>
-
-                        <div className="space-y-2">
-                            <label className="text-xs font-medium text-gray-500 uppercase tracking-wider">Message</label>
-                            <textarea
-                                rows="4"
-                                className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none"
-                                placeholder="Tell me about your project..."
-                            ></textarea>
-                        </div>
-
-                        <button type="submit" className="w-full btn btn-primary flex items-center justify-center gap-2">
-                            Send Message <Send className="w-4 h-4" />
-                        </button>
-                    </form>
+                <div className="relative z-10 h-[600px] w-full bg-black/50 rounded-lg overflow-hidden">
+                    <Cal
+                        namespace="30min"
+                        calLink="mohamed-hemmas-acwsxi/30min"
+                        style={{ width: "100%", height: "100%", overflow: "scroll" }}
+                        config={{ "layout": "month_view" }}
+                    />
                 </div>
             </div>
         </div>
