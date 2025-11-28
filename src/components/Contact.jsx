@@ -15,17 +15,17 @@ const Contact = () => {
                     </p>
 
                     <div className="space-y-6">
-                        <a href="mailto:contact@hemmas.ai" className="flex items-center gap-4 text-gray-300 hover:text-primary transition-colors group">
+                        <a href="mailto:hemmasmohamed7@gmail.com" className="flex items-center gap-4 text-gray-300 hover:text-primary transition-colors group">
                             <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                                 <Mail className="w-5 h-5" />
                             </div>
                             <div>
                                 <div className="text-xs text-gray-500">Email Me</div>
-                                <div className="font-medium">contact@hemmas.ai</div>
+                                <div className="font-medium">hemmasmohamed7@gmail.com</div>
                             </div>
                         </a>
 
-                        <a href="#" className="flex items-center gap-4 text-gray-300 hover:text-primary transition-colors group">
+                        <a href="https://www.linkedin.com/in/hemmas-mohamed-06a96021b/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-gray-300 hover:text-primary transition-colors group">
                             <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                                 <Linkedin className="w-5 h-5" />
                             </div>
@@ -36,10 +36,10 @@ const Contact = () => {
                         </a>
 
                         <div className="flex gap-4 mt-8">
-                            <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-white hover:bg-white/5 transition-all">
+                            <a href="https://github.com/Hemmas1954" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-white hover:bg-white/5 transition-all">
                                 <Github className="w-5 h-5" />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-white hover:bg-white/5 transition-all">
+                            <a href="https://wa.me/213676067652" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-white hover:bg-white/5 transition-all">
                                 <Phone className="w-5 h-5" />
                             </a>
                         </div>
