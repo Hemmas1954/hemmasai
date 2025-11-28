@@ -10,28 +10,19 @@ const TypewriterText = ({ text, delay = 0, className = "" }) => {
         hidden: { opacity: 0 },
         visible: (i = 1) => ({
             opacity: 1,
-            transition: { staggerChildren: 0.05, delayChildren: delay }
+            transition: { staggerChildren: 0.1, delayChildren: delay }
         })
     };
 
     const child = {
         visible: {
             opacity: 1,
-            y: 0,
             transition: {
-                type: "spring",
-                damping: 12,
-                stiffness: 100,
+                duration: 0, // Instant appearance for typing effect
             },
         },
         hidden: {
             opacity: 0,
-            y: 20,
-            transition: {
-                type: "spring",
-                damping: 12,
-                stiffness: 100,
-            },
         },
     };
 
@@ -122,10 +113,10 @@ const Hero = () => {
                         <span>AI Automation Engineer & n8n Architect</span>
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight">
-                        <TypewriterText text="Automating the" delay={0.5} /> <br />
+                    <h1 className="text-2xl sm:text-4xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight">
+                        <TypewriterText text="Automation" delay={0.5} /> <br />
                         <span className="gradient-text glow-text">
-                            <TypewriterText text="Future of Work" delay={1.5} />
+                            <TypewriterText text="Future of Work" delay={2.0} />
                         </span>
                     </h1>
 
